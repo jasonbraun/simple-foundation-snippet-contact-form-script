@@ -1,0 +1,121 @@
+<div class="row">
+  <!-- Form Starts -->
+  <form id="contactform" name="contactform" method="post" action="process.php" data-abide>
+    <!-- Name -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">Your Name <small>(required)</small></label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" name="name" id="name" placeholder="Jane Smith" required>
+        <small class="error">Your name is required!</small>
+      </div>
+    </div>
+    <!-- Telephone -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">Telephone</label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" id="telephone" name="telephone" placeholder="01234 567890">
+      </div>
+    </div>
+    <!-- Email -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline"> Your Email <small>(required)</small></label>
+      </div>
+      <div class="large-8 columns">
+        <input type="email" id="email" name="email" placeholder="name@email.com" required pattern="email">
+        <small class="error">A valid email address is required.</small>
+      </div>
+    </div>
+    <!-- House Number -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">House or Flat No.</label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" name="housenum" id="housenum" placeholder="House or Flat No.">
+      </div>
+    </div>
+    <!-- Street Address -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">Street Address</label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" name="streetaddress" id="streetaddress" placeholder="Street Address">
+      </div>
+    </div>
+    <!-- Town/City -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">Town or City</label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" name="towncity" id="address3" placeholder="TownCity">
+      </div>
+    </div>
+    <!-- County -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">County</label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" name="county" id="county" placeholder="County">
+      </div>
+    </div>
+    <!-- Postcode -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">Postcode</label>
+      </div>
+      <div class="large-8 columns">
+        <input type="text" id="postcode" name="postcode" placeholder="SS0 0AA">
+      </div>
+    </div>
+    <!-- Message -->
+    <div class="row collapse">
+      <div class="large-4 columns">
+        <label class="inline">Message</label>
+      </div>
+      <div class="large-8 columns">
+        <textarea name="comments" id="comments" type="text" placeholder="Your message...">
+        </div>
+      </div>
+      <!-- Honeypot - call it normal to phool bots (Xnay on the Oneypothay!) -->
+      <div class="row collapse">
+        <div class="large-4 columns">
+          <label class="hide">Normal</label>
+        </div>
+        <div class="hide large-8 columns">
+          <input name="normal" id="comments" type="text" placeholder="Type here...">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="large-8 columns">
+          <label>Radio 1</label>
+          <input type="radio" name="radio1" value="Yes" id="Yes"><label for="brochureYes">Yes</label>
+          <input type="radio" name="radio1" value="No" id="No"><label for="brochureNo">No</label>
+
+
+          <label>Radio 2</label>
+          <input name="radio2" type="radio" id="radio2" value="Yes"><label for="telephonepref">Telephone</label>
+          <input name="radio2" type="radio" id="radio2" value="No"><label for="emailpref">Email</label>
+        </div>
+
+
+
+        <!-- Submit -->
+        <div class="row collapse">
+          <div class="large-4 columns large-centered">
+            <button name="Submit" value="Submit" target="_self" type="submit" class="radius button expand">Submit</button>
+          </div>
+        </div> 
+      </form>
+
+    </div>
+
