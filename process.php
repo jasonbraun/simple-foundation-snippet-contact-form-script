@@ -47,7 +47,8 @@ $flds = array(
        
 
   //List of all values passed from the form
-'system::checks'=>array('name','telephone','comments','email','address1', 'address2','address3','address4','requestbrochure','methodofcontact','normal'),
+  //THESE SHOULD MATCH KEYS FROM ABOVE
+'system::checks'=>array('name','telephone','comments','email','housenum', 'streetaddress','towncity','county','postcode','radio1', 'radio2', 'normal'),
 
   //a post value to check if the form was actually posted
   'system::trigger'=>'email',
@@ -62,7 +63,7 @@ if(isset($_POST[$flds['system::trigger']])) {
   unset($flds['system::checks']);
   unset($flds['system::trigger']);
   if($ok) {
-    $pfw_header = "From: carl@gtduk.com\n" . "Reply-To: carl@gtduk.com\n";
+    $pfw_header = "From: no-reply@domain.com\n" . "Reply-To: no-reply@domain.com\n"; //CHANGE THIS
     $pfw_message = '';
     $pfw_subject = 'Form Submission';
     $pfw_email_to = "carl@gtduk.com";
