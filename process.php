@@ -66,7 +66,7 @@ if(isset($_POST[$flds['system::trigger']])) {
     $pfw_header = "From: no-reply@domain.com\n" . "Reply-To: no-reply@domain.com\n"; //CHANGE THIS
     $pfw_message = '';
     $pfw_subject = 'Form Submission';
-    $pfw_email_to = "carl@gtduk.com";
+    $pfw_email_to = "defaultemail@email.com"; //change this too
     foreach ($flds as $key => $header) {
       $k = explode(':', $key);
       $v = @$_POST[$k[0]];
