@@ -1,20 +1,11 @@
 <?php
-/*
-*  Author: Carl @ GT 
-*  Pilfered and edited by: Lauren
-*  Can you nick it? Yes you can!
-*/
-
-?>
-
-<?php
 $flds = array(
 
    //Email to send to 
-  '$to:target'=>'theemailitsendsto@email.com',
+  '$to:target'=>'jb@jasonbraun.me',
 
-  //Default email message it coems from when an email is not submitted
-  '$from:defaultfrom'=>'"Title of Website" <theEmailisfromthisperson@email.com>',
+  //Default email message it comes from when an email is not submitted
+  '$from:defaultfrom'=>'"jasonbraun.me" <jb@jasonbraun.me>',
 
   //Subject
   '$subject:subject'=>'Contact Submission',
@@ -23,7 +14,7 @@ $flds = array(
   '$top:readonly'=>'A submission has been made on your site, below are the provided details' . "\n\n",
 
   //Redirects to page once submitted - create a new page or change headers
-  '$redirect:defaultredirect'=>'/thank-you.html',
+  '$redirect:defaultredirect'=>'/thankyou.html',
 
   //Types available
   // from - This does not go into the email, but rather changes the email so the user to reply back to the given email address
@@ -33,22 +24,14 @@ $flds = array(
   // antibot - (Honeypot) Checks if value is nothing, if not, the email does not send.
   'email:from'=>'',
   'name:single'=>'Name',
-  'telephone:single'=>'Telephone',
   'email:single'=>'Email Address',
-  'housenum:single'=>'House or Flat No.',
-  'streetaddress:single'=>'Street',
-  'towncity:single'=>'Town/City',
-  'county:single'=>'County',
-  'postcode:single'=>'Postcode',
   'comments:text'=>'Message',
-  'radio1:single'=>'Choice 1',
-  'radio2:single'=>'Choice 2',
   'normal:antibot'=>'normal',
        
 
   //List of all values passed from the form
   //THESE SHOULD MATCH KEYS FROM ABOVE
-'system::checks'=>array('name','telephone','comments','email','housenum', 'streetaddress','towncity','county','postcode','radio1', 'radio2', 'normal'),
+'system::checks'=>array('name','comments','email','normal'),
 
   //a post value to check if the form was actually posted
   'system::trigger'=>'email',
@@ -63,10 +46,10 @@ if(isset($_POST[$flds['system::trigger']])) {
   unset($flds['system::checks']);
   unset($flds['system::trigger']);
   if($ok) {
-    $pfw_header = "From: no-reply@domain.com\n" . "Reply-To: no-reply@domain.com\n"; //CHANGE THIS
+    $pfw_header = "From: jb@jasonbraun.me\n" . "Reply-To: jb@jasonbraun.me\n";
     $pfw_message = '';
     $pfw_subject = 'Form Submission';
-    $pfw_email_to = "defaultemail@email.com"; //change this too
+    $pfw_email_to = "jb@jasonbraun.me";
     foreach ($flds as $key => $header) {
       $k = explode(':', $key);
       $v = @$_POST[$k[0]];
